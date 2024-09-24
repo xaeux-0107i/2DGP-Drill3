@@ -41,6 +41,18 @@ def run_left():
         draw_boy(20, y)
     pass
 
+def run_down():
+    print('down')
+    pass
+
+def run_up():
+    print('up')
+    pass
+
+def run_bottomT():
+    print('bottomT')
+    pass
+
 def run_rectangle():
     print('RECTANGLE')
     run_top()
@@ -60,9 +72,17 @@ def run_circle():
         draw_boy(x, y)
     pass
 
+def run_triangle():
+    print('TRIANGLE')
+    run_down()
+    run_bottomT()
+    run_up()
+    pass
+
 while True:
     #run_circle()
-    run_rectangle()
+    #run_rectangle()
+    run_triangle()
     break
 
 #탑다운 설계(하향식 설계)
