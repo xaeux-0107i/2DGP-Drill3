@@ -43,14 +43,22 @@ def run_left():
 
 def run_down():
     print('down')
+    x = 400
+    y = 550
+    for a in range (0, 50):
+        x += 370//50
+        y -= 10
+        draw_boy(x, y)
     pass
 
 def run_up():
     print('up')
-    pass
-
-def run_bottomT():
-    print('bottomT')
+    x = 20
+    y = 50
+    for a in range (0, 50):
+        x += 370//50
+        y += 10
+        draw_boy(x, y)
     pass
 
 def run_rectangle():
@@ -74,16 +82,18 @@ def run_circle():
 
 def run_triangle():
     print('TRIANGLE')
+    draw_boy(800//2, 550)
     run_down()
-    run_bottomT()
+    run_bottom()
     run_up()
     pass
 
 while True:
-    #run_circle()
-    #run_rectangle()
+    run_circle()
+    run_rectangle()
     run_triangle()
-    break
+    
+    
 
 #탑다운 설계(하향식 설계)
 #고수: 함수 호출 -> 함수 정의
