@@ -1,17 +1,10 @@
 from pico2d import *
+import math
 
 #실행 가능한 큰 뻐대를 먼저 만든다.
 #실행가능하다면 커밋한다.
 #무한 루프 맞는지 확인한다.
 #실행 된다면 커밋한다.
-def run_rectangle():
-    print('RECTANGLE')
-    pass
-
-def run_circle():
-    print('CIRCLE')
-    pass
-
 
 open_canvas()
 
@@ -19,11 +12,24 @@ open_canvas()
 grass = load_image('grass.png')
 boy = load_image('character.png')
 
-clear_canvas_now()
-boy.draw_now(400, 300)
-delay(1)
+def run_rectangle():
+    print('RECTANGLE')
+    pass
 
-pass
+def run_circle():
+    print('CIRCLE')
+    
+    r, cx, cy = 300, 800//2, 600//2
+    
+    for d in range (0, 360): # 0부터 359까지
+        x = r * math.cos(math.radians(d)) + cx
+        y = r * math.sin(math.radians(d)) + cy
+        
+        clear_canvas_now()
+        boy.draw_now(x, y)
+        delay(0.1)
+        
+    pass
 
 while True:
     run_circle()
